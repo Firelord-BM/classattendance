@@ -19,12 +19,24 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+#Landing {
+  width: 100vw;
+}
+#Landing span {
+  height: 120vh;
+}
+#right {
+  background-image: url("./background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* button styles */
+button {
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: #4ade80;
+  color: white;
 }
