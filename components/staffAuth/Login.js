@@ -66,7 +66,7 @@ export default function LoginPage() {
           />
         </div>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Log In
@@ -77,7 +77,7 @@ export default function LoginPage() {
         Don't have an account?{" "}
         <Link
           href="/staff/signup"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-green-400 hover:text-green-700"
         >
           Sign up here
         </Link>

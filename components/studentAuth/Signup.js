@@ -98,7 +98,7 @@ export default function SignupPage() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+          <label className="block text-gray-700 font-bold mb-2 " htmlFor="email">
             Email
           </label>
           <input
@@ -163,7 +163,7 @@ export default function SignupPage() {
           />
         </div>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Sign Up
@@ -172,7 +172,7 @@ export default function SignupPage() {
       </form>
       <p className="mt-4">
         Already have an account?{" "}
-        <Link href="/students" className="text-blue-500 hover:text-blue-700">
+        <Link href="/students" className="text-green-400 hover:text-green-700">
           Log in here
         </Link>
         .
