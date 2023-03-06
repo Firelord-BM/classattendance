@@ -71,7 +71,12 @@ export default function Nav() {
           {nav ? (
             <AiOutlineClose size={20} className="text-red-400" />
           ) : (
-            <AiOutlineMenu size={20} className="text-green-400" />
+            <AiOutlineMenu
+              size={20}
+              className={`${
+                color ? "text-white" : "text-green-400"
+              } font-bold `}
+            />
           )}
         </div>
 
