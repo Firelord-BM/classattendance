@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <div>
       <Nav />
       <section
-        className=" flex h-full md:flex-row flex-col relative "
+        className=" flex h-full md:flex-row flex-col-reverse relative "
         id="Landing"
       >
         {children}

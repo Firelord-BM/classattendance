@@ -46,7 +46,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col  justify-center items-center h-screen">
       <h1 className="text-4xl font-bold mb-4">Student Registration</h1>
       <form className="w-full max-w-md" onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -98,7 +98,10 @@ export default function SignupPage() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2 " htmlFor="email">
+          <label
+            className="block text-gray-700 font-bold mb-2 "
+            htmlFor="email"
+          >
             Email
           </label>
           <input

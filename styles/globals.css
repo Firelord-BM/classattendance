@@ -22,8 +22,13 @@ a {
 #Landing {
   width: 100vw;
 }
-#Landing span {
-  height: 120vh;
+#right {
+  min-height: 100vh;
+  max-height: 120vh;
+}
+#left {
+  max-height: 120vh;
+  min-height: 100vh;
 }
 #right {
   background-image: url("./background.jpg");
@@ -39,4 +44,19 @@ button {
   border-radius: 10px;
   background-color: #4ade80;
   color: white;
+}
+@media (max-width: 600px) {
+  #Landing span {
+    width: 100%;
+  }
+  #left {
+    min-height: 50vh;
+  }
+  #right {
+    background-color: #4ade80;
+    width: 100%;
+    margin-top: 10vh;
+
+    min-height: 50vh;
+  }
 }

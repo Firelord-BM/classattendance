@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link"
-import { useState, useEffect } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Nav() {
   const navLinks = [
@@ -19,77 +19,76 @@ export default function Nav() {
     },
   ];
 
-  const [nav,setNav]=useState(false);
-  const [color, setColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('green');
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("green");
 
-
-  const handleNav = () =>{
-    setNav(!nav)
-  }
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor('#ffffff');
-        setTextColor('#000000');
+      if (window.scrollY >= 10) {
+        setColor(true);
       } else {
-        setColor('transparent');
-        setTextColor('#ffffff');
+        setColor(false);
       }
     };
-    window.addEventListener('scroll', changeColor);
+    window.addEventListener("scroll", changeColor);
   }, []);
-
-  
+  const transparent = {
+    backgroundColor: "transparent",
+    color: "#4ADE80",
+  };
+  const opaque = {
+    backgroundColor: "#4ADE80",
+    color: "white",
+  };
   return (
-    <nav className="absolute flex  items-center justify-between top-0 w-full py-6 md:px-10 px-2 z-10">
-      <h1 className="text-green-400 font-bold text-xl">Class Attendance</h1>
+    <nav
+      className=" flex  fixed  items-center justify-between top-0 w-full z-10"
+      style={color ? opaque : transparent}
+    >
+      <div className=" flex  items-center justify-between w-full py-6 md:px-10 px-2 relative">
+        <h1
+          className={`${
+            color ? "text-white" : "text-green-400"
+          } font-bold text-xl`}
+        >
+          Class Attendance
+        </h1>
 
-      <ul className=" sm:flex hidden items-center justify-between">
-        {navLinks.map((l) => (
-          <Link href={l.link} key={l.name}>
-            <li className="py-2 px-4  hover:cursor-pointer">{l.name}</li>
-          </Link>
-        ))}
-      </ul>
+        <ul className=" sm:flex hidden items-center justify-between">
+          {navLinks.map((l) => (
+            <Link href={l.link} key={l.name}>
+              <li className="py-2 px-4  hover:cursor-pointer">{l.name}</li>
+            </Link>
+          ))}
+        </ul>
 
-      
-         <div onClick={handleNav} className='block sm:hidden z-10'>
+        <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={20} className="text-red-400" />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={20} className="text-green-400" />
           )}
         </div>
-        
+
         <div
-          className={
-            nav
-              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
-              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
-          }
+          className={` absolute text-right bg-green-400 text-white rounded-md right-0 duration-300 ease-in-out  ${
+            nav ? "top-[100%]  opacity-1" : "top-[150%] opacity-0 "
+          }`}
         >
           <ul>
-          {navLinks.map((l) => (
-          <Link href={l.link} key={l.name}>
-            <li className="py-2 px-4  hover:cursor-pointer">{l.name}</li>
-          </Link>
-        ))}
-
-
-            {/* <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/'>home</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/students'>Students</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/staff'>Staff</Link>
-            </li> */}
-          
+            {navLinks.map((l) => (
+              <Link href={l.link} key={l.name}>
+                <li className="py-2 px-4  hover:cursor-pointer">{l.name}</li>
+              </Link>
+            ))}
           </ul>
-        </div> 
+        </div>
+      </div>
     </nav>
   );
 }

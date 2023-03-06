@@ -6,7 +6,10 @@ export default function Signup() {
   return (
     <div>
       <Layout>
-        <span className="md:w-full w-1/2 flex flex-col justify-center items-center  p-4">
+        <span
+          id="left"
+          className="md:w-full w-1/2 flex flex-col justify-center items-center  p-4"
+        >
           <SignupPage />
         </span>
         <span

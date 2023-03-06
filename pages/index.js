@@ -1,11 +1,12 @@
 import Layout from "../components/landing/Layout";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <Layout>
         <span className="md:w-full w-1/2 flex flex-col justify-center items-center  p-4">
-          <div className="w-4/5">
+          <div className="md:w-4/5 w-full">
             <h1 className="text-green-400 font-bold text-4xl">
               Class Attendance
             </h1>
@@ -20,7 +21,9 @@ export default function Home() {
             </p>
             <br />
             <br />
-            <button>Login</button>
+            <Link href="/students">
+              <button>Login</button>
+            </Link>
           </div>
         </span>
         <span
