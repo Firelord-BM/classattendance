@@ -60,3 +60,12 @@ button {
     min-height: 50vh;
   }
 }
+#dashboardLayout{
+width: 100vw;
+min-height: 100vh;
+background-color: #4ade80;
+
+}
+#navDashboard{
+height: 100vh;
+}
