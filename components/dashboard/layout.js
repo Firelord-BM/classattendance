@@ -8,7 +8,10 @@ const layout = ({ children }) => {
       <Meta title="Dashboard" />
       <Nav />
       <section className="flex-1 bg-white rounded-tl-[20px] rounded-bl-[20px] flex flex-col items-center">
-        <div className=" flex  items-center justify-between w-full py-4 border-b-2 border-green-100 md:px-10 px-2 relative">
+        <div
+          id="dashboardNav"
+          className=" flex  items-center justify-between w-full py-4 border-b- border-green-100 md:px-10 px-2 relative"
+        >
           <h1 className="text-left text-green-600 text-xl font-black">
             Student Dashboard
           </h1>
