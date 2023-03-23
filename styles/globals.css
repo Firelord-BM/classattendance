@@ -37,6 +37,13 @@ a {
   background-repeat: no-repeat;
   z-index: -1;
 }
+#staff {
+  background-image: url("./staff.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 h3 {
   font-size: 20px;
   border-bottom: 2px solid rgb(74, 222, 128);
