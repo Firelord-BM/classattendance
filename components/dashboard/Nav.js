@@ -26,13 +26,13 @@ const nav = () => {
     {
       id: 2,
       name: "Register",
-      link: "/dashboard",
+      link: "/register",
       icon: " fa-address-card",
     },
     {
       id: 3,
       name: "Profile",
-      link: "/dashboard",
+      link: "/profile",
       icon: "fa-user",
     },
   ];
