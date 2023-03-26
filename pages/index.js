@@ -8,7 +8,7 @@ export default function Home() {
         <span className="md:w-full w-1/2 flex flex-col justify-center items-center  p-4">
           <div className="md:w-4/5 w-full">
             <h1 className="text-green-400 font-bold text-4xl">
-              Class Attendance
+              Class Attendance system
             </h1>
             <br />
             <br />
