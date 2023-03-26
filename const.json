@@ -1,3 +1,4 @@
 {
-    "API":"https://cas.mzeeshakil.com/api/"
+    "API1":"https://cas.mzeeshakil.com/api/",
+    "API":"http://localhost:5000/api/"
 }

@@ -46,6 +46,7 @@ const nav = () => {
           onClick: () => {
             // Perform any logout logic here
             // Redirect the user to the home route
+            localStorage.clear();
             window.location.href = "/";
           },
         },

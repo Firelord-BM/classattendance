@@ -63,7 +63,9 @@ export default function RegisterP() {
       registeredClasses.filter((item) => item.name !== classItem.name)
     );
   };
-
+  const fName =
+    localStorage.getItem("fName") + " " + localStorage.getItem("lName");
+  const reg = localStorage.getItem("reg");
   return (
     <div className="w-full ">
       <div
@@ -85,10 +87,8 @@ export default function RegisterP() {
             </div>{" "}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span>
-              <h1 className="font-black text-green-900 text-2xl">Jane Doe</h1>
-              <h2 className="font-medium text-green-700 text-sm">
-                S13/02580/20
-              </h2>
+              <h1 className="font-black text-green-900 text-2xl">{fName}</h1>
+              <h2 className="font-medium text-green-700 text-sm">{reg}</h2>
             </span>
           </div>
 

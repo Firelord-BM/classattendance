@@ -2,6 +2,13 @@ import React from "react";
 import PForm from "./PForm";
 
 export default function Profile() {
+  const fName =
+    localStorage.getItem("fName") + " " + localStorage.getItem("lName");
+  const reg = localStorage.getItem("reg");
+  const email = localStorage.getItem("email");
+  const phone = localStorage.getItem("phone");
+  const sem = localStorage.getItem("sem");
+  const year = localStorage.getItem("year");
   return (
     <div className="w-full ">
       <div
@@ -21,8 +28,8 @@ export default function Profile() {
             <img src="/jane.jpg" width="100%" alt="" />{" "}
           </div>
           <br />
-          <h1 className="font-black text-green-900 text-2xl">Jane Doe</h1>
-          <h2 className="font-medium text-green-700 text-sm">S13/02580/20</h2>
+          <h1 className="font-black text-green-900 text-2xl">{fName}</h1>
+          <h2 className="font-medium text-green-700 text-sm">{reg}</h2>
           <br />
           <ul className="w-full">
             <li className="bg-slate-50 flex items-center justify-between py-2 px-1 w-full ">
@@ -31,19 +38,19 @@ export default function Profile() {
             </li>
             <li className="bg-white flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Email</h4>
-              <p>jane@gmail.com</p>
+              <p>{email}</p>
             </li>
             <li className="bg-slate-50 flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Phone</h4>
-              <p>+254703231321</p>
+              <p>{phone}</p>
             </li>
             <li className="bg-white flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Year</h4>
-              <p>III</p>
+              <p>{year}</p>
             </li>
             <li className="bg-slate-50 flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Semester</h4>
-              <p>2</p>
+              <p>{sem}</p>
             </li>
             <li className="bg-white flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Gender</h4>

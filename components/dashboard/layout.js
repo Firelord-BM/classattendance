@@ -3,6 +3,10 @@ import Meta from "../Meta";
 import Nav from "./Nav";
 
 const layout = ({ children }) => {
+  const role = localStorage.getItem("role");
+  const fName =
+    localStorage.getItem("fName") + " " + localStorage.getItem("lName");
+  const reg = localStorage.getItem("reg");
   return (
     <main id="dashboardLayout" className="flex">
       <Meta title="Dashboard" />
@@ -13,13 +17,13 @@ const layout = ({ children }) => {
           className=" flex  items-center justify-between w-full py-4 border-b- border-green-100 md:px-10 px-2 z-10"
         >
           <h1 className="text-left text-green-600 text-xl font-black">
-            Student Dashboard
+            {role == 0 ? "Student " : "Staff"} Dashboard
           </h1>
           <span className="text-right">
             <h1 className="text-right text-green-800 text-xl font-black">
-              Jane Doe
+              {fName}
             </h1>
-            <p className="text-sm text-green-400">S13/02580/20</p>
+            <p className="text-sm text-green-400">{reg}</p>
           </span>
         </div>
         {children}
