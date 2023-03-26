@@ -10,7 +10,7 @@ export default function Signup() {
           <SignupPage />
         </span>
         <span
-          id="right"
+          id="staff"
           className="md:w-full w-1/2 flex flex-col items-center bg-green-400/10"
         ></span>
       </Layout>

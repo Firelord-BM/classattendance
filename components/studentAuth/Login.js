@@ -19,6 +19,15 @@ export default function LoginPage() {
       });
       const data = await response.json();
       if (response.ok) {
+        let student = data.student;
+        console.log(student);
+        localStorage.setItem("reg", student.registrationNumber);
+        localStorage.setItem("fName", student.firstName);
+        localStorage.setItem("lName", student.lastName);
+        localStorage.setItem("email", student.email);
+        localStorage.setItem("year", student.year);
+        localStorage.setItem("role", student.role);
+        localStorage.setItem("sem", student.semester);
         router.push("/dashboard");
       } else {
         setError(data.message);
