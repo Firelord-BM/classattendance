@@ -1,4 +1,5 @@
 import Layout from "../components/landing/Layout";
+import  Leaderboard from "../components/landing/Leaderboard";
 import Link from "next/link";
 import LeaderBoard from "../components/landing/LeaderBoard";
 
@@ -31,8 +32,15 @@ export default function Home() {
           id="right"
           className="md:w-full w-1/2 flex flex-col items-center bg-green-400/10"
         ></span>
+        {/* <Leaderboard/> */}
       </Layout>
+<<<<<<< HEAD
       <LeaderBoard />
     </div>
+=======
+      
+      
+    </>
+>>>>>>> api route
   );
 }
