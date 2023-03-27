@@ -56,6 +56,27 @@ h3 {
   padding-bottom: 3px;
   width: fit-content;
 }
+h4 {
+  position: relative;
+  color: antiquewhite;
+  font-size: 18px;
+  font-weight: 300;
+}
+h4::before,
+h4::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+}
+h4::before {
+  transform: translateY(-50%) translateX(-105%);
+}
+h4::after {
+  transform: translateY(-50%) translateX(5%);
+}
 p {
   color: grey;
 }
@@ -72,6 +93,28 @@ button,
   background-position: center;
   background-size: cover;
 }
+
+#leaderBoard {
+  background: rgb(84, 93, 220);
+  background: linear-gradient(
+    286deg,
+    rgba(84, 93, 220, 1) 0%,
+    rgba(143, 83, 214, 1) 100%
+  );
+}
+
+#number {
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  position: absolute;
+  /* bottom: -50%; */
+  color: white;
+  padding: 8px;
+  font-weight: 400;
+  border-radius: 50%;
+}
+
 .input-wrapper {
   width: 45%;
   display: flex;
@@ -88,6 +131,37 @@ button,
   background-color: transparent;
   padding: 8px 8px;
 }
+.input-wrapper select {
+  border-bottom: 1px solid #4ade80;
+  outline: #4ade80;
+  /* border-radius: 10px; */
+  background-color: transparent;
+  padding: 8px 8px;
+}
+.input-wrapper2 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper2 label {
+  margin-bottom: 10px;
+  color: #309254;
+}
+.input-wrapper2 input {
+  border-bottom: 1px solid #4ade80;
+  outline: #4ade80;
+  /* border-radius: 10px; */
+  background-color: transparent;
+  padding: 8px 8px;
+}
+.input-wrapper2 select {
+  border-bottom: 1px solid #4ade80;
+  outline: #4ade80;
+  /* border-radius: 10px; */
+  background-color: transparent;
+  padding: 8px 8px;
+}
+
 @media (max-width: 600px) {
   #Landing span {
     width: 100%;

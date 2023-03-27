@@ -16,15 +16,19 @@ const layout = ({ children }) => {
           id="dashboardNav"
           className=" flex  items-center justify-between w-full py-4 border-b- border-green-100 md:px-10 px-2 z-10"
         >
+          <span className="text-left flex items-center justify-between">
+            <img src="/jane.jpg" width="50px" className="rounded-2xl" alt="" />{" "}
+            &nbsp;&nbsp;&nbsp;{" "}
+            <div>
+              <h1 className="text-right text-green-800 text-xl font-black">
+                {fName}
+              </h1>
+              <p className="text-sm text-green-400">{reg}</p>
+            </div>{" "}
+          </span>
           <h1 className="text-left text-green-600 text-xl font-black">
             {role == 0 ? "Student " : "Staff"} Dashboard
           </h1>
-          <span className="text-right">
-            <h1 className="text-right text-green-800 text-xl font-black">
-              {fName}
-            </h1>
-            <p className="text-sm text-green-400">{reg}</p>
-          </span>
         </div>
         {children}
       </section>

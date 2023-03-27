@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PropTypes from "prop-types";
 
-const nav = () => {
+export default function Nav() {
   const router = useRouter();
   const currentUrl = router.asPath.split("/")[1];
   const dashboardLinks = [
@@ -16,26 +16,45 @@ const nav = () => {
       name: "Dashboard",
       link: "/dashboard",
       icon: "fa-gauge",
+      role: 0,
     },
     {
       id: 1,
       name: "Attendance",
       link: "/attendance",
       icon: "fa-clipboard-user",
+      role: 0,
     },
     {
       id: 2,
       name: "Register",
       link: "/register",
       icon: " fa-address-card",
+      role: 0,
     },
     {
       id: 3,
       name: "Profile",
       link: "/profile",
       icon: "fa-user",
+      role: 0,
+    },
+    {
+      id: 4,
+      name: "Create class",
+      link: "/create-class",
+      icon: "fa-plus",
+      role: 1,
+    },
+    {
+      id: 5,
+      name: "Generate Qr-code",
+      link: "/generate-qr-code",
+      icon: "fa-qrcode",
+      role: 1,
     },
   ];
+  const role = localStorage.getItem("role");
   const handleLogout = () => {
     confirmAlert({
       title: "Confirm Logout",
@@ -44,8 +63,6 @@ const nav = () => {
         {
           label: "Yes",
           onClick: () => {
-            // Perform any logout logic here
-            // Redirect the user to the home route
             localStorage.clear();
             window.location.href = "/";
           },
@@ -59,21 +76,24 @@ const nav = () => {
   return (
     <nav className="w-1/5 pl-20 pt-10 relative" id="navDashboard">
       <h1 className="text-4xl text-white font-black">CAMS</h1>
-      <ul className="mt-20 w-full">
-        {dashboardLinks.map((link) => (
-          <Link key={link.name} href={link.link}>
-            <li
-              className={`flex items-center mb-4 text-xl ${
-                currentUrl == link.name.toLowerCase()
-                  ? "bg-white text-green-400"
-                  : "text-white"
-              }  rounded-tl-[20px] rounded-bl-[20px] py-3 pl-2`}
-            >
-              <i className={`fa-solid ${link.icon}  pr-4`}></i>&nbsp;
-              {link.name}
-            </li>
-          </Link>
-        ))}
+
+      <ul className="mt-20 text-white w-full">
+        {dashboardLinks
+          .filter((link) => (role == 1 ? true : link.role == 0))
+          .map((link) => (
+            <Link key={link.name} href={link.link}>
+              <li
+                className={`flex items-center mb-4 text-xl ${
+                  "/" + currentUrl == link.link
+                    ? "bg-white text-green-400"
+                    : "text-white"
+                }  rounded-tl-[20px] rounded-bl-[20px] py-3 pl-2`}
+              >
+                <i className={`fa-solid ${link.icon}  pr-4`}></i>&nbsp;
+                {link.name}
+              </li>
+            </Link>
+          ))}
         <li
           onClick={handleLogout}
           className={`flex items-center mb-4 text-xl 
@@ -88,6 +108,4 @@ const nav = () => {
       </h3>
     </nav>
   );
-};
-
-export default nav;
+}

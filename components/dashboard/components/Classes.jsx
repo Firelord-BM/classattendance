@@ -1,18 +1,24 @@
 import React from "react";
 import ClassesRegisted from "./ClassesRegisted";
 import Link from "next/link";
+import ClassesRegistedLecturer from "./ClassesRegistedLecturer";
 
 export default function Classes() {
+  const role = parseInt(localStorage.getItem("role"));
   return (
     <div className="bg-slate-100 rounded-2xl px-3 py-5">
-      <h3>Classes Registered</h3>
-      <br />
+      {role === 0 ? <ClassesRegisted /> : <ClassesRegistedLecturer />}
 
-      <ClassesRegisted />
       <br />
-      <Link href="/register">
-        <button>Register</button>
-      </Link>
+      {role === 0 ? (
+        <Link href="/register">
+          <button>Register</button>
+        </Link>
+      ) : (
+        <Link href="/attendance">
+          <button>View Attendance</button>
+        </Link>
+      )}
     </div>
   );
 }

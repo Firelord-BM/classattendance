@@ -19,6 +19,13 @@ export default function LoginPage() {
       });
       const data = await response.json();
       if (response.ok) {
+        let staff = data.staff;
+        console.log(staff);
+        localStorage.setItem("reg", staff.staffNo);
+        localStorage.setItem("fName", staff.firstName);
+        localStorage.setItem("lName", staff.lastName);
+        localStorage.setItem("email", staff.email);
+        localStorage.setItem("role", staff.role);
         router.push("/dashboard");
       } else {
         setError(data.message);

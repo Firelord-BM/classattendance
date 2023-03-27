@@ -1,32 +1,60 @@
 import React from "react";
 
-export default function Cards() {
-  const cardData = [
-    {
-      title: " Total Units",
-      icon: "fa-landmark",
-      value: "9",
-      color: "bg-blue-400",
-    },
-    {
-      title: "Missed classes",
-      icon: "fa-ban",
-      value: "2",
-      color: "bg-red-400",
-    },
-    {
-      title: "Attendance",
-      icon: "fa-percentage",
-      value: "90%",
-      color: "bg-orange-400",
-    },
-    {
-      title: "Remaining",
-      icon: "fa-spinner",
-      value: "46",
-      color: "bg-purple-400",
-    },
-  ];
+export default function Cards({ role }) {
+  const cardData =
+    role === 0
+      ? [
+          {
+            title: " Total Units",
+            icon: "fa-landmark",
+            value: "9",
+            color: "bg-blue-400",
+          },
+          {
+            title: "Missed classes",
+            icon: "fa-ban",
+            value: "2",
+            color: "bg-red-400",
+          },
+          {
+            title: "Attendance",
+            icon: "fa-percentage",
+            value: "90%",
+            color: "bg-orange-400",
+          },
+          {
+            title: "Remaining",
+            icon: "fa-spinner",
+            value: "46",
+            color: "bg-purple-400",
+          },
+        ]
+      : [
+          {
+            title: " Total classes",
+            icon: "fa-landmark",
+            value: "4",
+            color: "bg-blue-400",
+          },
+          {
+            title: "Missed classes",
+            icon: "fa-ban",
+            value: "2",
+            color: "bg-red-400",
+          },
+          {
+            title: "Student attendance rate",
+            icon: "fa-percentage",
+            value: "90%",
+            color: "bg-green-400",
+          },
+          {
+            title: "Total students",
+            icon: "fa-user",
+            value: "600",
+            color: "bg-purple-400",
+          },
+        ];
   return (
     <div className="  w-full flex flex-col items-center  md:p-10 mt-0 ">
       <div

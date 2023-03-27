@@ -1,9 +1,10 @@
 import Layout from "../components/landing/Layout";
 import Link from "next/link";
+import LeaderBoard from "../components/landing/LeaderBoard";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Layout>
         <span className="md:w-full w-1/2 flex flex-col justify-center items-center  p-4">
           <div className="md:w-4/5 w-full">
@@ -31,6 +32,7 @@ export default function Home() {
           className="md:w-full w-1/2 flex flex-col items-center bg-green-400/10"
         ></span>
       </Layout>
-    </>
+      <LeaderBoard />
+    </div>
   );
 }
