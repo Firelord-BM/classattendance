@@ -46,18 +46,21 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="flex flex-col  justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">Student Registration</h1>
-      <form className="w-full max-w-md" onSubmit={handleSubmit}>
+    <div className="flex text-left flex-col justify-center items-start h-screen">
+      <h3 className="text-4xl font-bold mb-4">Student Registration</h3>
+      <p className=" text-sm mb-4">Please enter your details to register.</p>
+
+      {error && <p className="text-red-500">{error}</p>}
+      <form className="w-full max-w-md">
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="registrationNumber"
           >
             Registration Number
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="registrationNumber"
             type="text"
             value={registrationNumber}
@@ -67,13 +70,13 @@ export default function SignupPage() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="firstName"
           >
             First Name
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="firstName"
             type="text"
             value={firstName}
@@ -83,13 +86,13 @@ export default function SignupPage() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="lastName"
           >
             Last Name
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="lastName"
             type="text"
             value={lastName}
@@ -99,13 +102,13 @@ export default function SignupPage() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2 "
+            className="block text-green-400 font-bold mb-2 "
             htmlFor="email"
           >
             Email
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             value={email}
@@ -114,11 +117,11 @@ export default function SignupPage() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="year">
+          <label className="block text-green-400 font-bold mb-2" htmlFor="year">
             Year
           </label>
           <select
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="year"
             name="year"
             value={year}
@@ -132,16 +135,15 @@ export default function SignupPage() {
             <option value="4">4th Year</option>
           </select>
         </div>
-
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="password"
           >
             Password
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             value={password}
@@ -151,13 +153,13 @@ export default function SignupPage() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="repeatPassword"
           >
             Password
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="repeatPassword"
             type="password"
             value={repeatPassword}

@@ -53,19 +53,21 @@ const StaffSignUpForm = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">Staff Registration</h1>
+    <div className="flex text-left mt-20 flex-col justify-center items-start h-screen">
+      <h3 className="text-4xl font-bold mb-4">Student Registration</h3>
+      <p className=" text-sm mb-4">Please enter your details to register.</p>
 
+      {error && <p className="text-red-500">{error}</p>}
       <form className="w-full max-w-md" onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="staffNo"
           >
             Staff No:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="staffNo"
             value={staffNo}
@@ -75,11 +77,14 @@ const StaffSignUpForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="fname">
+          <label
+            className="block text-green-400 font-bold mb-2"
+            htmlFor="fname"
+          >
             First Name:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="fname"
             value={fname}
@@ -89,11 +94,14 @@ const StaffSignUpForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="lname">
+          <label
+            className="block text-green-400 font-bold mb-2"
+            htmlFor="lname"
+          >
             Last Name:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="lname"
             value={lname}
@@ -103,11 +111,14 @@ const StaffSignUpForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+          <label
+            className="block text-green-400 font-bold mb-2"
+            htmlFor="email"
+          >
             Email:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             id="email"
             value={email}
@@ -118,13 +129,13 @@ const StaffSignUpForm = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="faculty"
           >
             Faculty:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="faculty"
             value={faculty}
@@ -135,13 +146,13 @@ const StaffSignUpForm = () => {
 
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="department"
           >
             Department:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="department"
             value={department}
@@ -151,11 +162,11 @@ const StaffSignUpForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="unit">
+          <label className="block text-green-400 font-bold mb-2" htmlFor="unit">
             Unit:
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="unit"
             value={unit}
@@ -165,13 +176,13 @@ const StaffSignUpForm = () => {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="password"
           >
             Password
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             value={password}
@@ -181,13 +192,13 @@ const StaffSignUpForm = () => {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-400 font-bold mb-2"
             htmlFor="repeatPassword"
           >
             Repeat Password
           </label>
           <input
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-green-400 leading-tight focus:outline-none focus:shadow-outline"
             id="repeatPassword"
             type="password"
             value={repeatPassword}
@@ -206,7 +217,7 @@ const StaffSignUpForm = () => {
       </form>
       <p className="mt-4">
         Already have an account?{" "}
-        <Link href="/students" className="text-blue-500 hover:text-blue-700">
+        <Link href="/students" className="text-green-500 hover:text-green-700">
           Log in here
         </Link>
         .

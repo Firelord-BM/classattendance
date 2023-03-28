@@ -17,6 +17,18 @@ export default function Nav() {
       name: "Staff",
       link: "/staff",
     },
+    {
+      name: "Faqs",
+      link: "/faqs",
+    },
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
   ];
 
   const [nav, setNav] = useState(false);
@@ -47,7 +59,7 @@ export default function Nav() {
   };
   return (
     <nav
-      className=" flex  fixed  items-center justify-between top-0 w-full z-10"
+      className=" flex  fixed  items-center justify-between top-0 w-full z-40"
       style={color ? opaque : transparent}
     >
       <div className=" flex  items-center justify-between w-full py-6 md:px-10 px-2 relative">

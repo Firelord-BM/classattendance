@@ -47,6 +47,10 @@ export default function LeaderBoard() {
       <div className="md:w-4/5 w-11/12 flex items-center justify-center flex-col">
         <div
           id="Header"
+<<<<<<< HEAD
+=======
+          data-aos="fade-down"
+>>>>>>> animation
           className="flex flex-col items-center justify-center text-center "
         >
           <img src="./crown.png" alt="crown" width="100px" />
@@ -64,6 +68,11 @@ export default function LeaderBoard() {
         <div id="icons" className="flex w-full items-end justify-between">
           <div
             id="secondPlace"
+<<<<<<< HEAD
+=======
+            data-aos="fade-right"
+            data-aos-delay="100"
+>>>>>>> animation
             className="flex flex-1 items-center justify-between flex-col"
           >
             <div
@@ -87,6 +96,10 @@ export default function LeaderBoard() {
 
           <div
             id="firstPlace"
+<<<<<<< HEAD
+=======
+            data-aos="fade-up"
+>>>>>>> animation
             className="flex flex-1 items-center justify-between flex-col"
           >
             <div
@@ -114,6 +127,11 @@ export default function LeaderBoard() {
 
           <div
             id="thirdPlace"
+<<<<<<< HEAD
+=======
+            data-aos="fade-left"
+            data-aos-delay="200"
+>>>>>>> animation
             className="flex flex-1 items-center justify-between flex-col"
           >
             <div
@@ -143,6 +161,11 @@ export default function LeaderBoard() {
             {listOfStudents.map((student, index) => (
               <li
                 key={index}
+<<<<<<< HEAD
+=======
+                data-aos="fade-up"
+                data-aos-delay="200"
+>>>>>>> animation
                 className={`flex items-center text-white bg-white/20 hover:scale-105 duration-300 cursor-pointer hover: justify-between rounded-xl bg-opacity-80 backdrop-filter backdrop-blur-lg p-3 mb-${
                   index === listOfStudents.length - 1 ? 0 : 2
                 }`}

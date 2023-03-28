@@ -36,29 +36,34 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold mb-4">Log In</h1>
+    <div className="flex flex-col items-start mt-8 mb-8" data-aos="fade-right">
+      <h3 className="text-3xl font-bold mb-4">Staff Login</h3>
+      <p className="text-sm mb-4">
+        Please enter your staff number and password to log in.
+      </p>
+
       {error && <p className="text-red-500">{error}</p>}
-      <form className="w-full max-w-sm" onSubmit={handleSubmit}>
+      <form className="w-full max-w-sm">
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
-            htmlFor="registrationNumber"
+            className="block text-green-500 font-bold mb-2"
+            htmlFor="staffNumber"
           >
-            Staff Number
+            staff Number
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="registrationNumber"
+            id="staffNumber"
             type="text"
+            placeholder="Enter your staff number"
+            required
             value={staffNumber}
             onChange={(e) => setStaffNumber(e.target.value)}
-            required
           />
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-green-500 font-bold mb-2"
             htmlFor="password"
           >
             Password
@@ -67,19 +72,19 @@ export default function LoginPage() {
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
+            placeholder="Enter your password"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         <button
-          className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Log In
         </button>
       </form>
-
       <p className="mt-4">
         Don't have an account?{" "}
         <Link
