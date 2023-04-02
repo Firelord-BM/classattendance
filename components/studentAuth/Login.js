@@ -20,7 +20,7 @@ export default function LoginPage() {
       const data = await response.json();
       if (response.ok) {
         let student = data.student;
-        console.log(student);
+        // console.log(student);
         localStorage.setItem("reg", student.registrationNumber);
         localStorage.setItem("fName", student.firstName);
         localStorage.setItem("lName", student.lastName);
@@ -45,7 +45,7 @@ export default function LoginPage() {
       </p>
 
       {error && <p className="text-red-500">{error}</p>}
-      <form className="w-full max-w-sm">
+      <form className="w-full max-w-sm" onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             className="block text-green-500 font-bold mb-2"

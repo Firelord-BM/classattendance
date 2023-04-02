@@ -51,7 +51,7 @@ export default function SignupPage() {
       <p className=" text-sm mb-4">Please enter your details to register.</p>
 
       {error && <p className="text-red-500">{error}</p>}
-      <form className="w-full max-w-md">
+      <form className="w-full max-w-md" onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             className="block text-green-400 font-bold mb-2"
