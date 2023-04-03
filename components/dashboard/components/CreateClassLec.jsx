@@ -10,10 +10,11 @@ export default function CreateClassLec() {
   const sem = localStorage.getItem("sem");
   const year = localStorage.getItem("year");
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <div
         id="profile-banner"
-        className=" h-[350px] w-full  rounded-bl-2xl rounded-br-2xl"
+        className="h-[350px] w-full rounded-bl-2xl rounded-br-2xl"
+        style={{ backgroundImage: "url('/jane.jpg')", backgroundSize: "cover" }}
       />
       <div
         id="cardWrapper"
@@ -23,9 +24,9 @@ export default function CreateClassLec() {
           id="user"
           className="w-1/4 rounded-2xl bg-white border-2 flex flex-col items-center p-4"
         >
-          <div className="w-[150px] h-[150px] overflow-hidden  rounded-full bg-green-400">
+          <div className="w-[150px] h-[150px] overflow-hidden rounded-full bg-green-400">
             {" "}
-            <img src="/jane.jpg" width="100%" alt="" />{" "}
+            <img src="/jane.jpg" width="100%" alt="Profile picture of Jane" />{" "}
           </div>
           <br />
           <h1 className="font-black text-green-900 text-2xl">{fName}</h1>
@@ -37,8 +38,7 @@ export default function CreateClassLec() {
               <p>01/18/2001</p>
             </li>
             <li className="bg-white flex items-center justify-between py-2 px-1 w-full ">
-              <h4 className="text-sm text-green-800">Email</h4>
-              <p>{email}</p>
+              <h4 className="text-sm text-green-800">Email</h4><p>{email}</p>
             </li>
             <li className="bg-slate-50 flex items-center justify-between py-2 px-1 w-full ">
               <h4 className="text-sm text-green-800">Phone</h4>

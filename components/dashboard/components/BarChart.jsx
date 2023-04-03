@@ -31,7 +31,24 @@ const BarChart = () => {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div className="chart-container">
+      <Bar data={data} options={options} />
+      <style jsx>{`
+        .chart-container {
+          position: relative;
+          width: 100%;
+          height: 300px;
+        }
+        
+        @media screen and (min-width: 768px) {
+          .chart-container {
+            height: 400px;
+          }
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default BarChart;

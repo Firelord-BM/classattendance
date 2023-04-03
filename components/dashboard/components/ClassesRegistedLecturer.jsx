@@ -40,7 +40,7 @@ export default function ClassesRegistedLecturer() {
               registered.length + 1 == index ? "mb-2" : "mb-0"
             } ${index % 2 == 0 ? "bg-slate-50" : "bg-white"}`}
           >
-            <p className="" title={item.name}>
+            <p className="text-base" title={item.name}>
               {item.code}{" "}
             </p>
             <p className="text-green-800 " title="Number of students">

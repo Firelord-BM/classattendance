@@ -29,27 +29,24 @@ export default function ClassesRegistedLecturer() {
   ];
   return (
     <>
-      <h3>Your Classes</h3>
+      <h3 className="text-lg font-bold">Your Classes</h3>
       <br />
       <ul className="w-full">
         {registered.map((item, index) => (
           <li
             key={index}
-            className={`py-2 px-4  flex items-center justify-between ${
-              registered.length + 1 == index ? "mb-2" : "mb-0"
-            } ${index % 2 == 0 ? "bg-slate-50" : "bg-white"}`}
+            className={`py-2 px-4 flex flex-col md:flex-row items-center justify-between ${
+              index % 2 === 0 ? "bg-slate-50" : "bg-white"
+            }`}
           >
-            <p className="" title={item.name}>
+            <p className="text-md md:text-lg font-medium mb-2 md:mb-0 md:mr-6" title={item.name}>
               {item.code}{" "}
             </p>
-            <p className="text-green-800 " title="Number of students">
+            <p className="text-md text-green-800 mb-2 md:mb-0 md:mr-6" title="Number of students">
               {item.students}
             </p>
-            {/* <i className="fa-solid fa-eye text-green-400 hover:cursor-pointer hover:text-green-800"></i> */}
           </li>
         ))}
-        <br />
-        <br />
       </ul>
     </>
   );

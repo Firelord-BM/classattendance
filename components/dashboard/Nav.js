@@ -73,8 +73,9 @@ export default function Nav() {
       ],
     });
   };
+
   return (
-    <nav className="w-1/5 pl-20 pt-10 relative" id="navDashboard">
+    <nav className="w-1/5 md:w-1/5 pl-20 pt-10 relative" id="navDashboard">
       <h1 className="text-4xl text-white font-black">CAMS</h1>
 
       <ul className="mt-20 text-white w-full">
@@ -89,8 +90,8 @@ export default function Nav() {
                     : "text-white"
                 }  rounded-tl-[20px] rounded-bl-[20px] py-3 pl-2`}
               >
-                <i className={`fa-solid ${link.icon}  pr-4`}></i>&nbsp;
-                {link.name}
+                <i className={`fa-solid ${link.icon}  pr-4`}></i>
+                <span className="hidden md:inline">{link.name}</span>
               </li>
             </Link>
           ))}
@@ -100,6 +101,8 @@ export default function Nav() {
     text-white rounded-tl-[20px] rounded-bl-[20px] py-3 pl-2 cursor-pointer`}
         >
           <i className="fa-solid fa-right-from-bracket hover:text-red-400"></i>
+         
+
           &nbsp; logout
         </li>
       </ul>

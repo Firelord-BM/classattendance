@@ -13,15 +13,15 @@ export default function Profile() {
     <div className="w-full ">
       <div
         id="profile-banner"
-        className=" h-[350px] w-full  rounded-bl-2xl rounded-br-2xl"
+        className="h-[30rem] md:h-[35rem] lg:h-[40rem] rounded-bl-2xl rounded-br-2xl"
       />
       <div
         id="cardWrapper"
-        className="w-[95%] flex mt-[-150px] mx-auto justify-between"
+        className="max-w-screen-lg mx-auto px-4 md:px-0 flex-col md:flex-row justify-between mt-[-150px]"
       >
         <div
           id="user"
-          className="w-1/4 rounded-2xl bg-white border-2 flex flex-col items-center p-4"
+          className="w-full md:w-1/2 rounded-2xl bg-white border-2 flex flex-col items-center p-4"
         >
           <div className="w-[150px] h-[150px] overflow-hidden  rounded-full bg-green-400">
             {" "}

@@ -156,6 +156,8 @@ export default function LeaderBoard() {
                 }`}
               >
                 <span className="flex items-center space-x-8">
+
+
                   <span className=" text-xl ">{student.position}</span>
                   <img
                     src="./jane.jpg"

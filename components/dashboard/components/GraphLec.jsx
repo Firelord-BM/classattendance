@@ -1,3 +1,4 @@
+
 // import React, { useEffect, useRef } from "react";
 // import Chart from "chart.js/auto";
 
@@ -61,7 +62,7 @@ const DoughnutChart = ({ value, title }) => {
     },
   };
   return (
-    <div style={{ width: "300px", height: "300px" }}>
+    <div style={{ width: "100%", height: "300px" }}>
       <Doughnut data={data} options={options} />{" "}
     </div>
   );
