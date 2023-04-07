@@ -75,10 +75,10 @@ export default function Nav() {
   };
 
   return (
-    <nav className="w-1/5 md:w-1/5 pl-20 pt-10 relative" id="navDashboard">
+    <nav className="pl-2 " >
       <h1 className="text-4xl text-white font-black">CAMS</h1>
 
-      <ul className="mt-20 text-white w-full">
+      <ul className="mt-20 text-white ">
         {dashboardLinks
           .filter((link) => (role == 1 ? true : link.role == 0))
           .map((link) => (
@@ -90,8 +90,12 @@ export default function Nav() {
                     : "text-white"
                 }  rounded-tl-[20px] rounded-bl-[20px] py-3 pl-2`}
               >
-                <i className={`fa-solid ${link.icon}  pr-4`}></i>
-                <span className="hidden md:inline">{link.name}</span>
+                <i className={`fa-solid ${link.icon} pr-4`}></i>
+                
+    <span className=" hidden md:inline ">
+      {link.name}
+    </span>
+              
               </li>
             </Link>
           ))}
